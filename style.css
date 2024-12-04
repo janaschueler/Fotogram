@@ -1,0 +1,518 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("./fonts/Nunito-Bold.woff2") format("woff2"),
+    url("./fonts/Nunito-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("./fonts/Nunito-Medium.woff2") format("woff2"),
+    url("./fonts/Nunito-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("./fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Light.woff2") format("woff2"),
+    url("./fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 0px;
+  color: rgb(7, 36, 46);
+}
+
+h2 {
+  font-weight: 550;
+  font-size: 24px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 32px;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  min-height: 80px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 12vw, 160px);
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(7, 36, 46);
+}
+
+.brandName {
+  font-family: "Nunito";
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 12px;
+  color: rgba(7, 36, 46);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.atf {
+  background-color: rgba(7, 36, 46, 0.1);
+}
+
+.postionLogo {
+  height: 28px;
+  margin: 16px 0px 12px 16px;
+  cursor: pointer;
+}
+
+.albumContainer {
+  min-height: 80px;
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 12vw, 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.albumContainer span {
+  color: rgba(7, 36, 46, 0.6);
+  font-size: 16px;
+  margin-bottom: 24px;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+.travelImgsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.travelImgContainerThree {
+  flex: 25%;
+  max-width: 25%;
+}
+
+.travelImageUnit {
+  height: auto;
+  overflow: hidden;
+  border: 8px solid transparent;
+  border-radius: 16px;
+}
+
+.travelImageUnit img {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transition: transform 0.5s ease;
+}
+
+.travelImageUnit:hover img {
+  transform: scale(1.1);
+}
+
+.travelImg {
+  width: 100%;
+  cursor: pointer;
+}
+
+footer {
+  background-color: rgba(7, 36, 46, 0.1);
+  height: 120px;
+  padding: 16px 16px 16px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 12vw, 160px);
+}
+
+.image__Galery {
+  display: flex;
+  justify-content: center;
+}
+
+.myModalWhindow {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(7, 36, 46, 0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 16px;
+  margin: 60% auto;
+  padding: 12px;
+  max-width: 70%;
+
+  min-height: 600px;
+  max-height: 600px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeUnit {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.close {
+  background-image: url(./assets/icons/x-solid.svg);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(15, 91, 116);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  border-radius: 16px;
+  margin: 32px 0px 32px 0px;
+  max-height: 600px;
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.arrowRight {
+  background-image: url("./assets/icons/arrow-right-solid.svg");
+  background-color: rgba(7, 36, 46, 0.1);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+  padding: 16px 16px;
+}
+
+.arrowLeft {
+  background-image: url("./assets/icons/arrow-left-solid.svg");
+  background-color: rgba(7, 36, 46, 0.1);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+  padding: 16px 16px;
+}
+
+.arrowRight:hover {
+  background-color: rgba(7, 36, 46, 0.6);
+}
+
+.arrowLeft:hover {
+  background-color: rgba(7, 36, 46, 0.6);
+}
+
+.btnPostion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(7, 36, 46, 1);
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+.btnPostion span {
+  padding: 16px;
+}
+
+.imagePostion {
+  color: rgba(7, 36, 46, 1);
+  margin: 16px 16px 16px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.footerNav {
+  margin-left: 24px;
+}
+.sytelFooter {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(7, 36, 46, 1);
+  padding: 16px 16px 16px 0px;
+}
+
+.sytelFooter:hover {
+  color: rgb(15, 91, 116);
+}
+
+.datenschutzContainer {
+  min-height: 80px;
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 12vw, 160px);
+  color: rgb(7, 36, 46);
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.datenschutzContainer h1 {
+  margin-top: 52px;
+  margin-left: 0px;
+}
+
+.datenschutzContainer h2 {
+  margin-top: 24px;
+}
+
+.impressum {
+  min-height: 80px;
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 12vw, 160px);
+  color: rgb(7, 36, 46);
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.impressum h1 {
+  margin-top: 52px;
+  margin-left: 0px;
+}
+
+.impressum h2 {
+  margin-top: 24px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(7, 36, 46);
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: rgb(15, 91, 116);
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  right: 20px; /* Place the button 30px from the right */
+  cursor: pointer;
+  background-image: url("./assets/icons/arrow-up-solid.svg");
+  background-color: rgba(7, 36, 46, 0.1);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 16px 16px;
+}
+
+#myBtn:hover {
+  background-color: rgba(7, 36, 46, 0.6);
+}
+
+@media screen and (max-width: 800px) {
+  .travelImgContainerThree {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .br .close {
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+
+  .imagePostion {
+    margin: 0px 0px 0px 0px;
+    font-size: 24px;
+  }
+
+  .btnPostion {
+    margin-bottom: 16px;
+  }
+  .modalContent {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .travelImgContainerThree {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .albumContainer span {
+    text-align: center;
+  }
+
+  .footerNav {
+    justify-content: center;
+  }
+  .datenschutzContainer h1 {
+    margin-top: 32px;
+    margin-left: 0px;
+    font-size: 24px;
+  }
+
+  .datenschutzContainer h2 {
+    margin-top: 16px;
+    font-size: 24px;
+  }
+
+  .imagePostion {
+    font-size: 20px;
+  }
+
+  .modalImg {
+    max-width: 95%;
+  }
+  .brandName {
+    display: none;
+  }
+
+  .postionLogo {
+    margin: 0px;
+    height: 52px;
+  }
+
+  .atf {
+    display: flex;
+    justify-content: center;
+  }
+  footer {
+    justify-content: center;
+  }
+
+  .footerNav {
+    flex-direction: column;
+    margin-left: 16px;
+  }
+  .logoFooter {
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .footerNav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sytelFooter {
+    padding: 0px 0px 12px 0px;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  header span {
+    display: none;
+  }
+
+  .imagePostion {
+    margin: 0px 0px 0px 0px;
+  }
+  .logoFooter {
+    display: flex;
+    align-items: center;
+  }
+
+  .modalContent {
+    max-width: 90%;
+  }
+}

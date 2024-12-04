@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/icons/favicon_fotogram.png" />
+
+    <title>Fotogram</title>
+  </head>
+
+  <body>
+    <header class="atf">
+      <a href="./index.html"
+        ><img
+          class="postionLogo"
+          src="./assets/icons/favicon_fotogram.png"
+          alt="Icon Fotogram"
+      /></a>
+      <a class="brandName" href="./index.html">Fotogram</a>
+    </header>
+
+    <main>
+      <section class="albumContainer">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+        <h1>My Journey</h1>
+        <span> Welcome to my journey through photography.</span>
+        <div class="travelImgsContainer">
+          <div class="travelImgContainerThree">
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(0)"
+                class="travelImg"
+                src="./assets/img/Img18.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(1)"
+                class="travelImg"
+                src="./assets/img/img1.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(2)"
+                class="travelImg"
+                src="./assets/img/Img3.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(3)"
+                class="travelImg"
+                src="./assets/img/Img13.jpeg"
+                alt="img"
+              />
+            </div>
+          </div>
+
+          <div class="travelImgContainerThree">
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(4)"
+                class="travelImg"
+                src="./assets/img/Img4.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(5)"
+                class="travelImg"
+                src="./assets/img/Img6.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(6)"
+                class="travelImg"
+                src="./assets/img/Img7.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(7)"
+                class="travelImg"
+                src="./assets/img/Img14.jpeg"
+                alt="img"
+              />
+            </div>
+          </div>
+
+          <div class="travelImgContainerThree">
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(8)"
+                class="travelImg"
+                src="./assets/img/Img2.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(9)"
+                class="travelImg"
+                src="./assets/img/Img9.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(10)"
+                class="travelImg"
+                src="./assets/img/Img8.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(11)"
+                class="travelImg"
+                src="./assets/img/Img15.jpeg"
+                alt="img"
+              />
+            </div>
+          </div>
+
+          <div class="travelImgContainerThree">
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(12)"
+                class="travelImg"
+                src="./assets/img/Img10.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(13)"
+                class="travelImg"
+                src="./assets/img/Img12.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(13)"
+                class="travelImg"
+                src="./assets/img/Img16.jpeg"
+                alt="img"
+              />
+            </div>
+            <div class="travelImageUnit">
+              <img
+                onclick="openOverlay(14)"
+                class="travelImg"
+                src="./assets/img/Img20.jpeg"
+                alt="img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div
+          onclick="closeOverlay()"
+          id="myModalWhindow"
+          class="myModalWhindow"
+        >
+          <div onclick="preventBubbeling(event)" id="modalContent">
+            <div id="image__Galery"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="logoFooter">
+        <a href="./index.html"
+          ><img
+            class="postionLogo"
+            src="./assets/icons/favicon_fotogram.png"
+            alt="Icon Fotogram"
+        /></a>
+      </div>
+      <div class="footerNav">
+        <a class="sytelFooter" href="./impressum.html">Impressum</a>
+        <a class="sytelFooter" href="./datenschutz.html">Datenschutz</a>
+      </div>
+    </footer>
+  </body>
+
+  <script src="./script.js"></script>
+</html>
